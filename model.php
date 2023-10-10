@@ -15,7 +15,7 @@ select
     A.手当,
     A.管理者,
     B.氏名 as 管理者名,
-    DATE_FORMAT(A.生年月日, '%Y-%m-%d') as 生年月日
+    strftime('%Y-%m-%d', A.生年月日) as 生年月日
 from
     社員マスタ A
     left outer join
